@@ -1,0 +1,7 @@
+URDF README File
+
+Hello @Home. This README file describes what my URDF is used for.
+
+URDF (Unified Robot Description Format is a physical description of the robot. It contains parameters including physical locations of joints in 3D space, axes of rotation of all joints, and geometry of the links of the robot.
+
+
