@@ -1,0 +1,45 @@
+<robot name="talos">
+	<link name="base" />
+	<link name="body" />
+	<link name="shoulder" />
+	<link name="upperarm" />
+	<link name="lowerarm" />
+
+	<joint name="basetobody" type="revolute">
+		<parent link="base"/>
+		<child link="body"/>
+		<origin xyz="0 0 0.5"/>
+		<limit upper="3.14" lower="-3.14"
+			velocity="1.0" effort="1.0"/>
+		<axis xyz="0 0 -1"/>
+	</joint>
+
+	<joint name="bodytoshoulder" type="revolute">
+		<parent link="body"/>
+		<child link="shoulder"/>
+		<origin xyz="0.25 0.25 0.5"/>
+		<limit upper="1.3" lower="-1.3"
+			velocity="1.0" effort="1.0"/>
+		<axis xyz="0 0 -1"/>
+	</joint>
+
+	<joint name="shouldertoupperarm" type="revolute">
+		<parent link="shoulder"/>
+		<child link="upperarm"/>
+		<origin xyz="0 0.05 -0.25"/>
+		<limit upper="0.785" lower="-0.785"
+			velocity="1.0" effort="1.0"/>
+		<axis xyz="-1 0 0"/>
+	</joint>
+
+	<joint name="upperarmtolowerarm" type="revolute">
+		<parent link="upperarm"/>
+		<child link="lowerarm"/>
+		<origin xyz="0 0.5 0.15"/>
+		<limit upper="1.571" lower="-1.571"
+			velocity="1.0" effort="1.0"/>
+		<axis xyz="0 0 -1"/>
+	</joint>
+
+</robot>
+
